@@ -14,9 +14,9 @@ export class UsersService {
 
   constructor(private _http: HttpClient) {}
 
-  loginUser(employee: LoginUserDTO): Observable<ILoginUserResponse> {
+  loginUser(user: LoginUserDTO): Observable<ILoginUserResponse> {
 
-    return this._http.post<ILoginUserResponse>(this._url_login_user, employee);
+    return this._http.post<ILoginUserResponse>(this._url_login_user, user);
 
   }
 }
