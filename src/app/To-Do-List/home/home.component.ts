@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  signup: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onCLickForConditionalRendering(): void {
+    this.signup = true;
+
+  }
 }

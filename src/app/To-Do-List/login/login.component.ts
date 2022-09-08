@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   submitFormAndLoginUser(): void{
 
-    console.log("clicked")
+    console.log("Submit Login Clicked")
     let user: LoginUserDTO = new LoginUserDTO(
 
       (this.loginUserForm.value.email) ? this.loginUserForm.value.email : " " ,
@@ -36,10 +36,16 @@ export class LoginComponent implements OnInit {
     this._user_service.loginUser(user).pipe(filter (Boolean))
     .subscribe((data) => {
       console.log("login response", data);
+      //route to home page
       // this._router.navigate(['employee']);
 
     });
 
+  }
+
+  routeToSignUpPageOnClick(): void {
+    console.log("routing clicked");
+    this._router.navigate(['signup']);
   }
 
   //route to user's page
