@@ -8,19 +8,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './To-Do-List/login/login.component';
 import { HomeComponent } from './To-Do-List/home/home.component';
+import { RegisterComponent } from './To-Do-List/register/register.component';
+import { RouterModule } from '@angular/router';
+import { UserPageComponent } from './To-Do-List/user-page/user-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterComponent,
+    UserPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
     
   ],
   providers: [UsersService],

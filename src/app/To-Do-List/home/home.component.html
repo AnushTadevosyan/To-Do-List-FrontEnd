@@ -3,11 +3,15 @@
     <div class="box-1">
         <h1>GET ORGANIZED</h1>
     </div>
-
-    <div class="box-2">
+    <!-- <div class="box-2">
         <app-login></app-login>
+    </div> -->
+   
+    <div *ngIf="signup; else elseBlock">
+        <app-register></app-register>
     </div>
-
-    
-       
-</div>
+<ng-template #elseBlock>
+    <app-login></app-login>
+</ng-template>
+        <button (click)="onCLickForConditionalRendering()" [disabled]="signup" class="btn btn-secondary" >Create an account</button>
+</div> 

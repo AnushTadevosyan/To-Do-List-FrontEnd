@@ -6,3 +6,18 @@ export interface ILoginUserResponse{
         errorMessage: string
     
 }
+
+export interface IRegisterUserResponse{
+
+    firstName: string,
+    middleName: string,
+    lastName: string,
+    dob: string,
+    email: string,
+    error: boolean,
+    errorMessage: string,
+    employeeID: number,
+    password: string
+}
+
+
